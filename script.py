@@ -35,7 +35,7 @@ class PhotoFetcher:
     def procesar_foto(self, foto):
         album = self.obtener_album(foto['albumId'])
         if album:
-            print(f"Foto ID: {foto['id']}\nTítulo: {foto['title']}\nURL: {foto['url']}\nÁlbum ID: {album['id']}\nÁlbum Título: {album['title']}\n")
+            logging.info(f"Foto ID: {foto['id']}\nTítulo: {foto['title']}\nURL: {foto['url']}\nÁlbum ID: {album['id']}\nÁlbum Título: {album['title']}\n")
 
     def modo_secuencial(self, fotos):
         for foto in fotos:
@@ -66,7 +66,7 @@ class PhotoFetcher:
             self.modo_multiprocesos(fotos)
         
         fin = time.time()
-        print(f"Tiempo total de ejecución: {fin - inicio:.3f} segundos")
+        logging.info(f"Tiempo total de ejecución: {fin - inicio:.3f} segundos")
 
 
 def main():
