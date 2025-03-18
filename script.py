@@ -5,7 +5,7 @@ import threading
 import multiprocessing
 import logging
 
-# Configurar logging
+# Configuración de logs
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class PhotoFetcher:
